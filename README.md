@@ -15,6 +15,13 @@ Automated scraper for Bavarian fishing examination dates from the official websi
 go run main.go > exam-data.json
 ```
 
+## Data Storage
+
+- Exam data is stored in the `data/` folder with date-based filenames: `data/exam-data-YYYY-MM-DD.json`
+- `data/latest.json` symlink always points to the most recent data
+- Only stores new files when MD5 hash changes (deduplication)
+- Multiple updates per day get timestamp suffix: `data/exam-data-YYYY-MM-DD-HHMM.json`
+
 ## Data Structure
 
 The JSON output contains exam appointments with:

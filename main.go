@@ -18,6 +18,52 @@ func min(a, b int) int {
 	return b
 }
 
+func isHeaderSeparatorRow(cells []string) bool {
+	// Check if this is a header row with multiple city/region names in one cell
+	for _, cell := range cells {
+		cellLower := strings.ToLower(cell)
+		// Count how many city/region names appear in a single cell
+		cityCount := 0
+		cities := []string{"augsburg", "bamberg", "freising", "münchen", "nürnberg", "regensburg", "rosenheim", "traunstein"}
+		regions := []string{"oberbayern", "oberpfalz", "oberfranken", "mittelfranken", "schwaben"}
+
+		for _, city := range cities {
+			if strings.Contains(cellLower, city) {
+				cityCount++
+			}
+		}
+		for _, region := range regions {
+			if strings.Contains(cellLower, region) {
+				cityCount++
+			}
+		}
+
+		// If a single cell contains multiple cities/regions, it's a header row
+		if cityCount > 2 {
+			return true
+		}
+
+		// Also check for "frei belegt" pattern
+		if strings.Contains(cellLower, "frei") && strings.Contains(cellLower, "belegt") {
+			return true
+		}
+	}
+	return false
+}
+
+func isValidExamRow(cells []string) bool {
+	// Check if this looks like a valid exam appointment row
+	if len(cells) < 3 {
+		return false
+	}
+	// First cell should look like a date/time (contains date pattern and time)
+	firstCell := strings.TrimSpace(cells[0])
+	// Look for date pattern (DD.MM.YYYY) and time pattern (HH:MM)
+	hasDatePattern := strings.Contains(firstCell, ".") && strings.Contains(firstCell, ",")
+	hasTimePattern := strings.Contains(firstCell, ":")
+	return hasDatePattern && hasTimePattern
+}
+
 func main() {
 	// Start with the main page to establish session
 	baseURL := "https://fischerpruefung-online.bayern.de/fprApp/"
@@ -60,8 +106,6 @@ func main() {
 	}
 	defer resp.Body.Close()
 
-	fmt.Printf("Status Code: %d\n", resp.StatusCode)
-	fmt.Printf("Final URL: %s\n", resp.Request.URL.String())
 
 	if resp.StatusCode != 200 {
 		log.Fatal("Error: Status code", resp.StatusCode)
@@ -72,25 +116,11 @@ func main() {
 		log.Fatal("Error parsing HTML:", err)
 	}
 
-	// Debug: Print page title and check for tables
-	title := doc.Find("title").Text()
-	fmt.Printf("Page title: %s\n", strings.TrimSpace(title))
-
-	tableCount := doc.Find("table").Length()
-	fmt.Printf("Total tables found: %d\n", tableCount)
-
-	// Debug: Print first few lines of body text
-	bodyText := strings.TrimSpace(doc.Find("body").Text())
-	if len(bodyText) > 500 {
-		bodyText = bodyText[:500] + "..."
-	}
-	fmt.Printf("Body text preview: %s\n\n", bodyText)
 
 	var tables []map[string]interface{}
 
 	doc.Find("table").Each(func(i int, table *goquery.Selection) {
 		tableText := strings.TrimSpace(table.Text())
-		fmt.Printf("Table %d text preview: %s\n", i+1, tableText[:min(200, len(tableText))])
 
 		// Capture any table that looks like it contains exam-related data
 		if len(tableText) > 50 { // Skip very small tables
@@ -99,19 +129,52 @@ func main() {
 			table.Find("tr").Each(func(j int, row *goquery.Selection) {
 				var cells []string
 				row.Find("td, th").Each(func(k int, cell *goquery.Selection) {
-					cells = append(cells, strings.TrimSpace(cell.Text()))
+					cellText := strings.TrimSpace(cell.Text())
+					// Clean up text by removing extra whitespace and tabs
+					cellText = strings.ReplaceAll(cellText, "\t", " ")
+					cellText = strings.ReplaceAll(cellText, "\n", " ")
+					// Normalize multiple spaces to single space
+					for strings.Contains(cellText, "  ") {
+						cellText = strings.ReplaceAll(cellText, "  ", " ")
+					}
+					cellText = strings.TrimSpace(cellText)
+
+					// Skip empty cells and header separators
+					if cellText != "" && cellText != "-" && !strings.Contains(cellText, "Augsburg\tBamberg") {
+						cells = append(cells, cellText)
+					}
 				})
-				if len(cells) > 0 {
+				// Only include rows that are valid exam appointments
+				if len(cells) > 2 && !isHeaderSeparatorRow(cells) && isValidExamRow(cells) {
 					rows = append(rows, cells)
 				}
 			})
 
 			if len(rows) > 0 {
-				tableData := map[string]interface{}{
-					"table_index": i + 1,
-					"rows":        rows,
+				// Convert rows to structured exam data
+				var examData []map[string]string
+				for _, row := range rows {
+					if len(row) >= 4 { // Ensure we have enough columns
+						exam := map[string]string{
+							"date_time": row[0],
+							"location":  row[1],
+							"city":      row[2],
+							"region":    row[3],
+						}
+						if len(row) >= 5 {
+							exam["status"] = row[4]
+						}
+						examData = append(examData, exam)
+					}
 				}
-				tables = append(tables, tableData)
+
+				if len(examData) > 0 {
+					tableData := map[string]interface{}{
+						"exam_appointments": examData,
+						"total_count":       len(examData),
+					}
+					tables = append(tables, tableData)
+				}
 			}
 		}
 	})

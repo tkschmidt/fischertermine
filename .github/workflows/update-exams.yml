@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *'  # Run at midnight UTC every day
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -23,27 +27,63 @@ jobs:
     - name: Install dependencies
       run: go mod download
 
-    - name: Run scraper
-      run: go run main.go > exam-data.json
-
-    - name: Check for changes
+    - name: Run scraper and check for changes
       id: changes
       run: |
-        if [ ! -f exam-data.json.bak ]; then
-          echo "changes=true" >> $GITHUB_OUTPUT
+        # Create data directory
+        mkdir -p data
+
+        # Generate current data
+        go run main.go > current-data.json
+
+        # Get current date
+        DATE=$(date '+%Y-%m-%d')
+
+        # Calculate MD5 of new data
+        NEW_MD5=$(md5sum current-data.json | cut -d' ' -f1)
+
+        # Check if latest.json exists and compare MD5
+        if [ -f "data/latest.json" ]; then
+          OLD_MD5=$(md5sum data/latest.json | cut -d' ' -f1)
+          if [ "$NEW_MD5" = "$OLD_MD5" ]; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+            exit 0
+          fi
+        fi
+
+        # Changes detected or no previous data
+        echo "changes=true" >> $GITHUB_OUTPUT
+
+        # Create dated filename
+        FILENAME="exam-data-${DATE}.json"
+
+        # If file with same date exists, add timestamp
+        if [ -f "data/$FILENAME" ]; then
+          FILENAME="exam-data-${DATE}-$(date '+%H%M').json"
+        fi
+
+        # Save with dated filename in data folder
+        cp current-data.json "data/$FILENAME"
+
+        # Update/create latest.json symlink in data folder
+        cd data
+        rm -f latest.json
+        ln -s "$FILENAME" latest.json
+        cd ..
+
+        echo "filename=data/$FILENAME" >> $GITHUB_OUTPUT
+        if [ ! -f "data/latest.json" ]; then
           echo "message=Initial exam data" >> $GITHUB_OUTPUT
-        elif ! cmp -s exam-data.json exam-data.json.bak; then
-          echo "changes=true" >> $GITHUB_OUTPUT
-          echo "message=Updated exam data $(date '+%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
         else
-          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "message=Updated exam data ($DATE)" >> $GITHUB_OUTPUT
         fi
 
     - name: Create Pull Request
       if: steps.changes.outputs.changes == 'true'
       uses: peter-evans/create-pull-request@v5
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         commit-message: "${{ steps.changes.outputs.message }}"
         title: "Update exam data - ${{ steps.changes.outputs.message }}"
         body: |
@@ -52,13 +92,14 @@ jobs:
           This PR contains updated examination dates from the Bavarian fishing exam website.
 
           **Changes:**
-          - Updated exam schedule data
+          - New file: `${{ steps.changes.outputs.filename }}`
+          - Updated symlink: `data/latest.json`
           - Generated at: ${{ github.run_id }}
 
           Please review the changes before merging.
         branch: update-exam-data-${{ github.run_number }}
         delete-branch: true
 
-    - name: Backup current data
-      if: steps.changes.outputs.changes == 'true'
-      run: cp exam-data.json exam-data.json.bak
+    - name: Cleanup temp files
+      if: always()
+      run: rm -f current-data.json

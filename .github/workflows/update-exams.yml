@@ -1,0 +1,64 @@
+name: Update Exam Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run at midnight UTC every day
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+
+    - name: Install dependencies
+      run: go mod download
+
+    - name: Run scraper
+      run: go run main.go > exam-data.json
+
+    - name: Check for changes
+      id: changes
+      run: |
+        if [ ! -f exam-data.json.bak ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "message=Initial exam data" >> $GITHUB_OUTPUT
+        elif ! cmp -s exam-data.json exam-data.json.bak; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "message=Updated exam data $(date '+%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Create Pull Request
+      if: steps.changes.outputs.changes == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "${{ steps.changes.outputs.message }}"
+        title: "Update exam data - ${{ steps.changes.outputs.message }}"
+        body: |
+          🎣 **Fishing Exam Data Update**
+
+          This PR contains updated examination dates from the Bavarian fishing exam website.
+
+          **Changes:**
+          - Updated exam schedule data
+          - Generated at: ${{ github.run_id }}
+
+          Please review the changes before merging.
+        branch: update-exam-data-${{ github.run_number }}
+        delete-branch: true
+
+    - name: Backup current data
+      if: steps.changes.outputs.changes == 'true'
+      run: cp exam-data.json exam-data.json.bak

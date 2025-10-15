@@ -45,17 +45,62 @@ jobs:
         # Check if latest.json exists and compare MD5
         if [ -f "data/latest.json" ]; then
           OLD_MD5=$(md5sum data/latest.json | cut -d' ' -f1)
+          echo "Old MD5: $OLD_MD5"
+          echo "New MD5: $NEW_MD5"
           if [ "$NEW_MD5" = "$OLD_MD5" ]; then
             echo "changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
             exit 0
           fi
-          # Generate diff for PR body
+          # Generate semantic diff using jq
           echo "DIFF<<EOF" >> $GITHUB_OUTPUT
-          diff -u data/latest.json current-data.json | head -50 || true
+          echo "📊 Changes detected between versions:"
+          echo ""
+
+          # Extract exam appointments and create comparable format
+          jq -r '.[0].exam_appointments[] | "\(.date_time) | \(.location) | \(.city) | \(.status)"' data/latest.json | sort > old_exams.txt
+          jq -r '.[0].exam_appointments[] | "\(.date_time) | \(.location) | \(.city) | \(.status)"' current-data.json | sort > new_exams.txt
+
+          # Find new appointments
+          NEW_COUNT=$(comm -13 old_exams.txt new_exams.txt | wc -l)
+          if [ "$NEW_COUNT" -gt 0 ]; then
+            echo "🆕 **New appointments ($NEW_COUNT):**"
+            comm -13 old_exams.txt new_exams.txt | head -10
+            if [ "$NEW_COUNT" -gt 10 ]; then
+              echo "... and $((NEW_COUNT - 10)) more"
+            fi
+            echo ""
+          fi
+
+          # Find removed appointments
+          REMOVED_COUNT=$(comm -23 old_exams.txt new_exams.txt | wc -l)
+          if [ "$REMOVED_COUNT" -gt 0 ]; then
+            echo "❌ **Removed appointments ($REMOVED_COUNT):**"
+            comm -23 old_exams.txt new_exams.txt | head -10
+            if [ "$REMOVED_COUNT" -gt 10 ]; then
+              echo "... and $((REMOVED_COUNT - 10)) more"
+            fi
+            echo ""
+          fi
+
+          # Find status changes (same appointment, different status)
+          echo "🔄 **Status changes:**"
+          join -t'|' <(cut -d'|' -f1-3 old_exams.txt | paste -d'|' - <(cut -d'|' -f4 old_exams.txt)) \
+                     <(cut -d'|' -f1-3 new_exams.txt | paste -d'|' - <(cut -d'|' -f4 new_exams.txt)) \
+          | while IFS='|' read datetime location city old_status new_status; do
+            if [ "$old_status" != "$new_status" ]; then
+              echo "$datetime | $location | $city: $old_status → $new_status"
+            fi
+          done | head -10
+
+          rm -f old_exams.txt new_exams.txt
           echo "EOF" >> $GITHUB_OUTPUT
         else
-          echo "DIFF=Initial data - no previous version to compare" >> $GITHUB_OUTPUT
+          echo "DIFF<<EOF" >> $GITHUB_OUTPUT
+          echo "📊 Initial data load - no previous version to compare"
+          echo ""
+          echo "This is the first time exam data is being added to the repository."
+          echo "EOF" >> $GITHUB_OUTPUT
         fi
 
         # Changes detected or no previous data
@@ -92,6 +137,7 @@ jobs:
         token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         commit-message: "${{ steps.changes.outputs.message }}"
         title: "Update exam data - ${{ steps.changes.outputs.message }}"
+        assignees: tkschmidt
         body: |
           🎣 **Fishing Exam Data Update**
 

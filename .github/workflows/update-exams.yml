@@ -50,6 +50,12 @@ jobs:
             echo "No changes detected"
             exit 0
           fi
+          # Generate diff for PR body
+          echo "DIFF<<EOF" >> $GITHUB_OUTPUT
+          diff -u data/latest.json current-data.json | head -50 || true
+          echo "EOF" >> $GITHUB_OUTPUT
+        else
+          echo "DIFF=Initial data - no previous version to compare" >> $GITHUB_OUTPUT
         fi
 
         # Changes detected or no previous data
@@ -95,6 +101,11 @@ jobs:
           - New file: `${{ steps.changes.outputs.filename }}`
           - Updated symlink: `data/latest.json`
           - Generated at: ${{ github.run_id }}
+
+          **Diff:**
+          ```diff
+          ${{ steps.changes.outputs.DIFF }}
+          ```
 
           Please review the changes before merging.
         branch: update-exam-data-${{ github.run_number }}

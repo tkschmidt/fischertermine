@@ -6,7 +6,9 @@ import (
 	"log"
 	"net/http"
 	"net/http/cookiejar"
+	"sort"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -62,6 +64,43 @@ func isValidExamRow(cells []string) bool {
 	hasDatePattern := strings.Contains(firstCell, ".") && strings.Contains(firstCell, ",")
 	hasTimePattern := strings.Contains(firstCell, ":")
 	return hasDatePattern && hasTimePattern
+}
+
+func parseDateTime(dateTimeStr string) time.Time {
+	// Parse German date format: "25.10.2025, 08:00"
+	layout := "02.01.2006, 15:04"
+	parsed, err := time.Parse(layout, dateTimeStr)
+	if err != nil {
+		// Return zero time if parsing fails, will sort to beginning
+		return time.Time{}
+	}
+	return parsed
+}
+
+func sortExamData(examData []map[string]string) {
+	sort.Slice(examData, func(i, j int) bool {
+		// Primary sort: by date_time
+		dateI := parseDateTime(examData[i]["date_time"])
+		dateJ := parseDateTime(examData[j]["date_time"])
+
+		if !dateI.Equal(dateJ) {
+			return dateI.Before(dateJ)
+		}
+
+		// Secondary sort: by location (alphabetical)
+		locationI := examData[i]["location"]
+		locationJ := examData[j]["location"]
+
+		if locationI != locationJ {
+			return locationI < locationJ
+		}
+
+		// Tertiary sort: by status (Frei before Belegt for same location/time)
+		statusI := examData[i]["status"]
+		statusJ := examData[j]["status"]
+
+		return statusI < statusJ
+	})
 }
 
 func main() {
@@ -169,6 +208,9 @@ func main() {
 				}
 
 				if len(examData) > 0 {
+					// Sort the exam data for consistent ordering
+					sortExamData(examData)
+
 					tableData := map[string]interface{}{
 						"exam_appointments": examData,
 						"total_count":       len(examData),

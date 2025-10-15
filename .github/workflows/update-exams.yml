@@ -27,6 +27,9 @@ jobs:
     - name: Install dependencies
       run: go mod download
 
+    - name: Make scripts executable
+      run: chmod +x scripts/generate-diff.sh
+
     - name: Run scraper and check for changes
       id: changes
       run: |
@@ -45,17 +48,23 @@ jobs:
         # Check if latest.json exists and compare MD5
         if [ -f "data/latest.json" ]; then
           OLD_MD5=$(md5sum data/latest.json | cut -d' ' -f1)
+          echo "Old MD5: $OLD_MD5"
+          echo "New MD5: $NEW_MD5"
           if [ "$NEW_MD5" = "$OLD_MD5" ]; then
             echo "changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
             exit 0
           fi
-          # Generate diff for PR body
+          # Generate semantic diff using our script
           echo "DIFF<<EOF" >> $GITHUB_OUTPUT
-          diff -u data/latest.json current-data.json | head -50 || true
+          ./scripts/generate-diff.sh data/latest.json current-data.json
           echo "EOF" >> $GITHUB_OUTPUT
         else
-          echo "DIFF=Initial data - no previous version to compare" >> $GITHUB_OUTPUT
+          echo "DIFF<<EOF" >> $GITHUB_OUTPUT
+          echo "📊 Initial data load - no previous version to compare"
+          echo ""
+          echo "This is the first time exam data is being added to the repository."
+          echo "EOF" >> $GITHUB_OUTPUT
         fi
 
         # Changes detected or no previous data
@@ -92,6 +101,7 @@ jobs:
         token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         commit-message: "${{ steps.changes.outputs.message }}"
         title: "Update exam data - ${{ steps.changes.outputs.message }}"
+        assignees: tkschmidt
         body: |
           🎣 **Fishing Exam Data Update**
 

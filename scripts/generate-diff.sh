@@ -29,8 +29,11 @@ fi
 OLD_MD5=$(md5sum "$OLD_FILE" | cut -d' ' -f1)
 NEW_MD5=$(md5sum "$NEW_FILE" | cut -d' ' -f1)
 
-echo "Debug: Old MD5: $OLD_MD5" >&2
-echo "Debug: New MD5: $NEW_MD5" >&2
+# Debug output only if DEBUG env var is set
+if [ "${DEBUG:-}" = "1" ]; then
+    echo "Debug: Old MD5: $OLD_MD5" >&2
+    echo "Debug: New MD5: $NEW_MD5" >&2
+fi
 
 if [ "$OLD_MD5" = "$NEW_MD5" ]; then
     echo "No changes detected between files"
@@ -48,8 +51,10 @@ NEW_TEMP=$(mktemp)
 jq -r '.[0].exam_appointments[] | "\(.date_time) | \(.location) | \(.city) | \(.status)"' "$OLD_FILE" | sort > "$OLD_TEMP"
 jq -r '.[0].exam_appointments[] | "\(.date_time) | \(.location) | \(.city) | \(.status)"' "$NEW_FILE" | sort > "$NEW_TEMP"
 
-echo "Debug: Old file has $(wc -l < "$OLD_TEMP") appointments" >&2
-echo "Debug: New file has $(wc -l < "$NEW_TEMP") appointments" >&2
+if [ "${DEBUG:-}" = "1" ]; then
+    echo "Debug: Old file has $(wc -l < "$OLD_TEMP") appointments" >&2
+    echo "Debug: New file has $(wc -l < "$NEW_TEMP") appointments" >&2
+fi
 
 # Find new appointments
 NEW_COUNT=$(comm -13 "$OLD_TEMP" "$NEW_TEMP" | wc -l)

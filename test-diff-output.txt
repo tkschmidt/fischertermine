@@ -1,0 +1,12 @@
+Debug: Old MD5: ddc8a6687067cda48a67cd58860340ce
+Debug: New MD5: 2d2e37b372d295c917622f0a59231419
+📊 Changes detected between versions:
+
+Debug: Old file has       36 appointments
+Debug: New file has       37 appointments
+🆕 **New appointments (       1):**
+25.10.2025, 10:30 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+
+🔄 **Status changes:**
+
+Summary:        1 new,        0 removed appointments

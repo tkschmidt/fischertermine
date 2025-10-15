@@ -56,9 +56,12 @@ jobs:
             exit 0
           fi
           # Generate semantic diff using our script
-          echo "DIFF<<EOF" >> $GITHUB_OUTPUT
-          ./scripts/generate-diff.sh data/latest.json current-data.json
-          echo "EOF" >> $GITHUB_OUTPUT
+          ./scripts/generate-diff.sh data/latest.json current-data.json > diff-output.txt
+          {
+            echo "DIFF<<EOF"
+            cat diff-output.txt
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
         else
           echo "DIFF<<EOF" >> $GITHUB_OUTPUT
           echo "📊 Initial data load - no previous version to compare"
@@ -123,4 +126,4 @@ jobs:
 
     - name: Cleanup temp files
       if: always()
-      run: rm -f current-data.json
+      run: rm -f current-data.json diff-output.txt

@@ -1,8 +1,11 @@
 📊 Changes detected between versions:
 
 🆕 **New appointments (1):**
-25.10.2025, 10:30 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+25.10.2025, 14:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
+
+❌ **Removed appointments (1):**
+25.10.2025, 14:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
 
 🔄 **Status changes:**
 
-Summary: 1 new, 0 removed appointments
+Summary: 1 new, 1 removed appointments

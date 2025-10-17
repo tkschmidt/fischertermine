@@ -1,12 +1,15 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (2):**
-18.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-25.10.2025, 15:30 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
+🆕 **New appointments (5):**
+25.10.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+25.10.2025, 09:15 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+25.10.2025, 10:30 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+25.10.2025, 11:45 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+25.10.2025, 11:45 | Staatliche Technikerschule für Agrarwirtschaft Triesdorf | Weidenbach | Belegt
 
 ❌ **Removed appointments (1):**
-18.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+25.10.2025, 11:45 | Staatliche Technikerschule für Agrarwirtschaft Triesdorf | Weidenbach | Frei
 
 🔄 **Status changes:**
 
-Summary: 2 new, 1 removed appointments
+Summary: 5 new, 1 removed appointments

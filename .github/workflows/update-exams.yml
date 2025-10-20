@@ -12,6 +12,9 @@ permissions:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    outputs:
+      changes: ${{ steps.changes.outputs.changes }}
+      freising_available: ${{ steps.changes.outputs.freising_available }}
 
     steps:
     - name: Checkout code

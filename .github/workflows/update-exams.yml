@@ -12,6 +12,9 @@ permissions:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    outputs:
+      changes: ${{ steps.changes.outputs.changes }}
+      freising_available: ${{ steps.changes.outputs.freising_available }}
 
     steps:
     - name: Checkout code
@@ -139,13 +142,10 @@ jobs:
 
     steps:
     - name: Send Pushover notification
-      uses: unoconv/pushover-action@v1
+      uses: desiderati/github-action-pushover@v1
       with:
-        user-key: ${{ secrets.PUSHOVER_USER_KEY }}
-        api-token: ${{ secrets.PUSHOVER_API_TOKEN }}
-        title: "🎣 Freising Exam Available!"
-        message: |
-          Good news! There are ${{ needs.update-data.outputs.freising_available }} available exam slot(s) in Freising.
-
-          Check the data for appointment details.
-        priority: normal
+        job-status: success
+        pushover-api-token: ${{ secrets.PUSHOVER_API_TOKEN }}
+        pushover-user-key: ${{ secrets.PUSHOVER_USER_KEY }}
+        pushover-title: "🎣 Freising Exam Available!"
+        pushover-message: "Good news! There are ${{ needs.update-data.outputs.freising_available }} available exam slot(s) in Freising. Check the data for appointment details."

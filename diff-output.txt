@@ -1,11 +1,9 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (1):**
-25.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-
-❌ **Removed appointments (1):**
-25.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+🆕 **New appointments (2):**
+25.10.2025, 11:45 | bfz Bamberg gGmbH | Bamberg | Frei
+25.10.2025, 12:45 | VHS Weiden | Weiden | Frei
 
 🔄 **Status changes:**
 
-Summary: 1 new, 1 removed appointments
+Summary: 2 new, 0 removed appointments

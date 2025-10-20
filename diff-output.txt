@@ -1,27 +1,12 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (11):**
-25.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-25.10.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-25.10.2025, 09:15 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-25.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-25.10.2025, 09:15 | cbz - Computer Bildungszentrum, Freising | Freising | Belegt
-25.10.2025, 10:30 | Bildungszentrum Rosenheim | Rosenheim | Belegt
-25.10.2025, 10:30 | HWK Bildungszentrum Traunstein | Traunstein | Frei
-25.10.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Belegt
-25.10.2025, 10:30 | cbz - Computer Bildungszentrum, Freising | Freising | Frei
-25.10.2025, 11:30 | VHS Weiden | Weiden | Belegt
-... and 1 more
+🆕 **New appointments (2):**
+25.10.2025, 09:45 | Industrie- und Handelskammer IHK Campus | München | Belegt
+25.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
 
-❌ **Removed appointments (7):**
-25.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-25.10.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-25.10.2025, 09:15 | Bezirksfischereiverein Passau, Passau | Passau | Frei
-25.10.2025, 09:15 | cbz - Computer Bildungszentrum, Freising | Freising | Frei
-25.10.2025, 10:30 | Bildungszentrum Rosenheim | Rosenheim | Frei
-25.10.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Frei
-25.10.2025, 11:30 | VHS Weiden | Weiden | Frei
+❌ **Removed appointments (1):**
+25.10.2025, 09:45 | Industrie- und Handelskammer IHK Campus | München | Frei
 
 🔄 **Status changes:**
 
-Summary: 11 new, 7 removed appointments
+Summary: 2 new, 1 removed appointments

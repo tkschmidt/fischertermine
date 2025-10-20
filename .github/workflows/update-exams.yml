@@ -97,6 +97,10 @@ jobs:
           echo "message=Updated exam data ($DATE)" >> $GITHUB_OUTPUT
         fi
 
+        # Check for available appointments in Freising
+        FREISING_AVAILABLE=$(jq -r '.[0].exam_appointments[] | select(.city | test("Freising"; "i")) | select(.status | test("Frei"; "i")) | .date_time' current-data.json | wc -l)
+        echo "freising_available=$FREISING_AVAILABLE" >> $GITHUB_OUTPUT
+
     - name: Create Pull Request
       if: steps.changes.outputs.changes == 'true'
       uses: peter-evans/create-pull-request@v5
@@ -127,3 +131,21 @@ jobs:
     - name: Cleanup temp files
       if: always()
       run: rm -f current-data.json diff-output.txt
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: update-data
+    if: needs.update-data.outputs.changes == 'true' && needs.update-data.outputs.freising_available > 0
+
+    steps:
+    - name: Send Pushover notification
+      uses: unoconv/pushover-action@v1
+      with:
+        user-key: ${{ secrets.PUSHOVER_USER_KEY }}
+        api-token: ${{ secrets.PUSHOVER_API_TOKEN }}
+        title: "🎣 Freising Exam Available!"
+        message: |
+          Good news! There are ${{ needs.update-data.outputs.freising_available }} available exam slot(s) in Freising.
+
+          Check the data for appointment details.
+        priority: normal

@@ -1,13 +1,9 @@
 📊 Changes detected between versions:
 
 🆕 **New appointments (2):**
-25.10.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-25.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-
-❌ **Removed appointments (2):**
-25.10.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Frei
-25.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+25.10.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+25.10.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
 
 🔄 **Status changes:**
 
-Summary: 2 new, 2 removed appointments
+Summary: 2 new, 0 removed appointments

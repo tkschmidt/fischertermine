@@ -1,0 +1,287 @@
+[
+  {
+    "exam_appointments": [
+      {
+        "city": "Passau",
+        "date_time": "25.10.2025, 08:00",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "25.10.2025, 08:00",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "25.10.2025, 08:00",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "25.10.2025, 08:30",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "25.10.2025, 09:00",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "25.10.2025, 09:15",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Passau",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Rosenheim",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Bildungszentrum Rosenheim",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Traunstein",
+        "date_time": "25.10.2025, 09:15",
+        "location": "HWK Bildungszentrum Traunstein",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weidenbach",
+        "date_time": "25.10.2025, 09:15",
+        "location": "Staatliche Technikerschule für Agrarwirtschaft Triesdorf",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "25.10.2025, 09:15",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Freising",
+        "date_time": "25.10.2025, 09:15",
+        "location": "cbz - Computer Bildungszentrum, Freising",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "25.10.2025, 09:45",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "25.10.2025, 10:15",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "25.10.2025, 10:30",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Frei"
+      },
+      {
+        "city": "Passau",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Rosenheim",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Bildungszentrum Rosenheim",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Traunstein",
+        "date_time": "25.10.2025, 10:30",
+        "location": "HWK Bildungszentrum Traunstein",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weidenbach",
+        "date_time": "25.10.2025, 10:30",
+        "location": "Staatliche Technikerschule für Agrarwirtschaft Triesdorf",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "25.10.2025, 10:30",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Freising",
+        "date_time": "25.10.2025, 10:30",
+        "location": "cbz - Computer Bildungszentrum, Freising",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "München",
+        "date_time": "25.10.2025, 11:00",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "25.10.2025, 11:30",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Passau",
+        "date_time": "25.10.2025, 11:45",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Rosenheim",
+        "date_time": "25.10.2025, 11:45",
+        "location": "Bildungszentrum Rosenheim",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 11:45",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weidenbach",
+        "date_time": "25.10.2025, 11:45",
+        "location": "Staatliche Technikerschule für Agrarwirtschaft Triesdorf",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "25.10.2025, 11:45",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Frei"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "25.10.2025, 12:45",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Frei"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 13:00",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 14:15",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "25.10.2025, 15:30",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Frei"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "29.10.2025, 08:00",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Frei"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 08:00",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Frei"
+      }
+    ],
+    "total_count": 40
+  }
+]

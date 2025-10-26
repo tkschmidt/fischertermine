@@ -1,8 +1,18 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (1):**
-29.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+❌ **Removed appointments (38):**
+25.10.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+25.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+25.10.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
+25.10.2025, 08:30 | Industrie- und Handelskammer IHK Campus | München | Belegt
+25.10.2025, 09:00 | VHS Weiden | Weiden | Belegt
+25.10.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+25.10.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
+25.10.2025, 09:15 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+25.10.2025, 09:15 | Bildungszentrum Rosenheim | Rosenheim | Belegt
+25.10.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
+... and 28 more
 
 🔄 **Status changes:**
 
-Summary: 1 new, 0 removed appointments
+Summary: 0 new, 38 removed appointments

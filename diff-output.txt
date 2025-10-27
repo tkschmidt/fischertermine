@@ -1,17 +1,15 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (5):**
-15.11.2025, 08:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
-15.11.2025, 09:15 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
-15.11.2025, 10:30 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
-29.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-29.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-
-❌ **Removed appointments (3):**
-15.11.2025, 08:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
-29.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-29.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+🆕 **New appointments (8):**
+15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+15.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
+15.11.2025, 09:15 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
+15.11.2025, 10:30 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+22.11.2025, 09:00 | VHS Weiden | Weiden | Frei
+22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
+29.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+29.10.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
 
 🔄 **Status changes:**
 
-Summary: 5 new, 3 removed appointments
+Summary: 8 new, 0 removed appointments

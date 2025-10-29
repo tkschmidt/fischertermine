@@ -1,13 +1,16 @@
 📊 Changes detected between versions:
 
 🆕 **New appointments (2):**
-15.11.2025, 10:30 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
-15.11.2025, 11:45 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
+15.11.2025, 13:00 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+22.11.2025, 09:00 | VHS Weiden | Weiden | Belegt
 
-❌ **Removed appointments (2):**
-15.11.2025, 10:30 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
-15.11.2025, 11:45 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+❌ **Removed appointments (5):**
+22.11.2025, 09:00 | VHS Weiden | Weiden | Frei
+29.10.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+29.10.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+29.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+29.10.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
 
 🔄 **Status changes:**
 
-Summary: 2 new, 2 removed appointments
+Summary: 2 new, 5 removed appointments

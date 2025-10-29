@@ -1,15 +1,13 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (4):**
-15.11.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-15.11.2025, 10:30 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
-15.11.2025, 11:45 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
-29.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+🆕 **New appointments (2):**
+15.11.2025, 10:30 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
+15.11.2025, 11:45 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
 
 ❌ **Removed appointments (2):**
-15.11.2025, 10:30 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
-29.10.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+15.11.2025, 10:30 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
+15.11.2025, 11:45 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
 
 🔄 **Status changes:**
 
-Summary: 4 new, 2 removed appointments
+Summary: 2 new, 2 removed appointments

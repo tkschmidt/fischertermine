@@ -1,14 +1,17 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (3):**
-15.11.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
-22.11.2025, 10:15 | VHS Weiden | Weiden | Frei
+🆕 **New appointments (7):**
+15.11.2025, 11:45 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+15.11.2025, 11:45 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
+15.11.2025, 13:00 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
+22.11.2025, 08:30 | Industrie- und Handelskammer IHK Campus | München | Frei
+22.11.2025, 09:15 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
+22.11.2025, 09:15 | Grund- und Mittelschule Schweitenkirchen | Schweitenkirchen | Frei
+22.11.2025, 10:30 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
 
-❌ **Removed appointments (2):**
-15.11.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
+❌ **Removed appointments (1):**
+15.11.2025, 13:00 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
 
 🔄 **Status changes:**
 
-Summary: 3 new, 2 removed appointments
+Summary: 7 new, 1 removed appointments

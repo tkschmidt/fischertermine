@@ -1,11 +1,20 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (1):**
-15.11.2025, 11:45 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+🆕 **New appointments (9):**
+15.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+15.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+15.11.2025, 09:15 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Belegt
+15.11.2025, 10:30 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
+15.11.2025, 11:45 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
+15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+22.11.2025, 09:15 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
+22.11.2025, 09:45 | Industrie- und Handelskammer IHK Campus | München | Belegt
+22.11.2025, 10:30 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
 
-❌ **Removed appointments (1):**
-15.11.2025, 11:45 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+❌ **Removed appointments (2):**
+15.11.2025, 09:15 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
+15.11.2025, 11:45 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
 
 🔄 **Status changes:**
 
-Summary: 1 new, 1 removed appointments
+Summary: 9 new, 2 removed appointments

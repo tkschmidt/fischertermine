@@ -1,22 +1,8 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (9):**
-15.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-15.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-15.11.2025, 13:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
-22.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-22.11.2025, 09:15 | Staatl. Berufsschule Mindelheim | Mindelheim | Belegt
-22.11.2025, 10:15 | VHS Weiden | Weiden | Belegt
-22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Frei
-
-❌ **Removed appointments (4):**
-15.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-22.11.2025, 09:15 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
-22.11.2025, 10:15 | VHS Weiden | Weiden | Frei
+🆕 **New appointments (1):**
+22.11.2025, 10:30 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
 
 🔄 **Status changes:**
 
-Summary: 9 new, 4 removed appointments
+Summary: 1 new, 0 removed appointments

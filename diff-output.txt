@@ -1,8 +1,11 @@
 📊 Changes detected between versions:
 
 🆕 **New appointments (1):**
-22.11.2025, 11:30 | VHS Weiden | Weiden | Frei
+29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
+
+❌ **Removed appointments (1):**
+29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Frei
 
 🔄 **Status changes:**
 
-Summary: 1 new, 0 removed appointments
+Summary: 1 new, 1 removed appointments

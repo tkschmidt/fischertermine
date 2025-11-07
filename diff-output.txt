@@ -1,10 +1,10 @@
 📊 Changes detected between versions:
 
 🆕 **New appointments (1):**
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
+22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Belegt
 
 ❌ **Removed appointments (1):**
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Frei
+22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
 
 🔄 **Status changes:**
 

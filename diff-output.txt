@@ -1,18 +1,23 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (6):**
-15.11.2025, 10:30 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Belegt
-22.11.2025, 09:15 | Grund- und Mittelschule Schweitenkirchen | Schweitenkirchen | Belegt
-22.11.2025, 10:30 | Anglerclub Ingolstadt e.V. | Ingolstadt | Belegt
+🆕 **New appointments (7):**
+13.11.2025, 17:45 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Belegt
+15.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+15.11.2025, 13:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
+22.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+22.11.2025, 12:15 | Industrie- und Handelskammer IHK Campus | München | Belegt
+29.11.2025, 09:15 | bfz Bamberg gGmbH | Bamberg | Belegt
+29.11.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Belegt
+
+❌ **Removed appointments (7):**
+13.11.2025, 17:45 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Frei
+15.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+15.11.2025, 13:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Frei
+22.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+22.11.2025, 12:15 | Industrie- und Handelskammer IHK Campus | München | Frei
 29.11.2025, 09:15 | bfz Bamberg gGmbH | Bamberg | Frei
 29.11.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Frei
-29.11.2025, 11:45 | bfz Bamberg gGmbH | Bamberg | Frei
-
-❌ **Removed appointments (3):**
-15.11.2025, 10:30 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
-22.11.2025, 09:15 | Grund- und Mittelschule Schweitenkirchen | Schweitenkirchen | Frei
-22.11.2025, 10:30 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
 
 🔄 **Status changes:**
 
-Summary: 6 new, 3 removed appointments
+Summary: 7 new, 7 removed appointments

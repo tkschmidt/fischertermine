@@ -1,24 +1,20 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (24):**
-13.11.2025, 19:00 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Frei
-14.11.2025, 12:00 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-14.11.2025, 13:15 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-14.11.2025, 14:30 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-15.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-15.11.2025, 10:15 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-15.11.2025, 11:30 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-15.11.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-15.11.2025, 11:45 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Belegt
-15.11.2025, 12:45 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
-... and 14 more
+🆕 **New appointments (7):**
+15.11.2025, 13:00 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
+22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
+22.11.2025, 13:00 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
+22.11.2025, 13:30 | Industrie- und Handelskammer IHK Campus | München | Belegt
+22.11.2025, 14:45 | Industrie- und Handelskammer IHK Campus | München | Frei
+29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
+29.11.2025, 10:30 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
 
 ❌ **Removed appointments (4):**
-22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
-29.11.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Belegt
-29.11.2025, 11:45 | bfz Bamberg gGmbH | Bamberg | Frei
+22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
+22.11.2025, 13:30 | Industrie- und Handelskammer IHK Campus | München | Frei
+29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Frei
+29.11.2025, 10:30 | Bezirksfischereiverein Passau, Passau | Passau | Frei
 
 🔄 **Status changes:**
 
-Summary: 24 new, 4 removed appointments
+Summary: 7 new, 4 removed appointments

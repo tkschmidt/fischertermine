@@ -1,20 +1,11 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (7):**
-15.11.2025, 13:00 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Frei
-22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
-22.11.2025, 13:00 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
-22.11.2025, 13:30 | Industrie- und Handelskammer IHK Campus | München | Belegt
-22.11.2025, 14:45 | Industrie- und Handelskammer IHK Campus | München | Frei
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Belegt
-29.11.2025, 10:30 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+🆕 **New appointments (1):**
+15.11.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
 
-❌ **Removed appointments (4):**
-22.11.2025, 09:15 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
-22.11.2025, 13:30 | Industrie- und Handelskammer IHK Campus | München | Frei
-29.11.2025, 08:00 | bfz Bamberg gGmbH | Bamberg | Frei
-29.11.2025, 10:30 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+❌ **Removed appointments (1):**
+15.11.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
 
 🔄 **Status changes:**
 
-Summary: 7 new, 4 removed appointments
+Summary: 1 new, 1 removed appointments

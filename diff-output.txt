@@ -1,25 +1,17 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (12):**
-15.11.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-22.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
-22.11.2025, 11:45 | Staatl. Berufsschule Mindelheim | Mindelheim | Belegt
-22.11.2025, 13:00 | Anglerclub Ingolstadt e.V. | Ingolstadt | Belegt
-29.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
-29.11.2025, 09:15 | BIB Augsburg gGmbH, Weilheim | Weilheim i. OB | Frei
-29.11.2025, 09:15 | Bildungszentrum Rosenheim | Rosenheim | Frei
-29.11.2025, 09:15 | HWK Bildungszentrum Traunstein | Traunstein | Frei
-29.11.2025, 09:15 | VHS Mühldorf | Mühldorf am Inn | Frei
-... and 2 more
-
-❌ **Removed appointments (5):**
-15.11.2025, 11:45 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+🆕 **New appointments (6):**
+22.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
 22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Belegt
-22.11.2025, 11:45 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
-22.11.2025, 13:00 | Anglerclub Ingolstadt e.V. | Ingolstadt | Frei
-29.11.2025, 10:30 | bfz Bamberg gGmbH | Bamberg | Frei
+29.11.2025, 08:00 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Belegt
+29.11.2025, 09:15 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Belegt
+29.11.2025, 10:30 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Frei
+29.11.2025, 13:00 | bfz Bamberg gGmbH | Bamberg | Frei
+
+❌ **Removed appointments (2):**
+22.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
+22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
 
 🔄 **Status changes:**
 
-Summary: 12 new, 5 removed appointments
+Summary: 6 new, 2 removed appointments

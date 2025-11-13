@@ -1,0 +1,483 @@
+[
+  {
+    "exam_appointments": [
+      {
+        "city": "Kempten (Allgäu)",
+        "date_time": "13.11.2025, 17:45",
+        "location": "Zweckverband Landwirtschaftsschule Kempten",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Kempten (Allgäu)",
+        "date_time": "13.11.2025, 19:00",
+        "location": "Zweckverband Landwirtschaftsschule Kempten",
+        "region": "Schwaben",
+        "status": "Frei"
+      },
+      {
+        "city": "Passau",
+        "date_time": "14.11.2025, 12:00",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Passau",
+        "date_time": "14.11.2025, 13:15",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Passau",
+        "date_time": "14.11.2025, 14:30",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 08:00",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "15.11.2025, 08:00",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Straubing",
+        "date_time": "15.11.2025, 09:00",
+        "location": "IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "15.11.2025, 09:15",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 09:15",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "15.11.2025, 09:15",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "15.11.2025, 09:15",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Neu-Ulm",
+        "date_time": "15.11.2025, 09:15",
+        "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Straubing",
+        "date_time": "15.11.2025, 10:15",
+        "location": "IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "15.11.2025, 10:30",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 10:30",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "15.11.2025, 10:30",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "15.11.2025, 10:30",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Neu-Ulm",
+        "date_time": "15.11.2025, 10:30",
+        "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Straubing",
+        "date_time": "15.11.2025, 11:30",
+        "location": "IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "15.11.2025, 11:45",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 11:45",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "15.11.2025, 11:45",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "15.11.2025, 11:45",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Neu-Ulm",
+        "date_time": "15.11.2025, 11:45",
+        "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Straubing",
+        "date_time": "15.11.2025, 12:45",
+        "location": "IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing",
+        "region": "Niederbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Landsberg am Lech",
+        "date_time": "15.11.2025, 13:00",
+        "location": "Agrarbildungszentrum Landsberg am Lech",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 13:00",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "15.11.2025, 13:00",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "Neu-Ulm",
+        "date_time": "15.11.2025, 13:00",
+        "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
+        "region": "Schwaben",
+        "status": "Frei"
+      },
+      {
+        "city": "Bayreuth",
+        "date_time": "15.11.2025, 14:15",
+        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+        "region": "Oberfranken",
+        "status": "Frei"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "22.11.2025, 08:00",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 08:30",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "22.11.2025, 09:00",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Ingolstadt",
+        "date_time": "22.11.2025, 09:15",
+        "location": "Anglerclub Ingolstadt e.V.",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "22.11.2025, 09:15",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Schweitenkirchen",
+        "date_time": "22.11.2025, 09:15",
+        "location": "Grund- und Mittelschule Schweitenkirchen",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "22.11.2025, 09:15",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Frei"
+      },
+      {
+        "city": "Mindelheim",
+        "date_time": "22.11.2025, 09:15",
+        "location": "Staatl. Berufsschule Mindelheim",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 09:45",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "22.11.2025, 10:15",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Belegt"
+      },
+      {
+        "city": "Ingolstadt",
+        "date_time": "22.11.2025, 10:30",
+        "location": "Anglerclub Ingolstadt e.V.",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Regenstauf",
+        "date_time": "22.11.2025, 10:30",
+        "location": "Eckert Schulen AG, Regenstauf",
+        "region": "Oberpfalz",
+        "status": "Frei"
+      },
+      {
+        "city": "Schweitenkirchen",
+        "date_time": "22.11.2025, 10:30",
+        "location": "Grund- und Mittelschule Schweitenkirchen",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Nürnberg",
+        "date_time": "22.11.2025, 10:30",
+        "location": "Haus der Fischerei - Nürnberg",
+        "region": "Mittelfranken",
+        "status": "Frei"
+      },
+      {
+        "city": "Mindelheim",
+        "date_time": "22.11.2025, 10:30",
+        "location": "Staatl. Berufsschule Mindelheim",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 11:00",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Weiden",
+        "date_time": "22.11.2025, 11:30",
+        "location": "VHS Weiden",
+        "region": "Oberpfalz",
+        "status": "Frei"
+      },
+      {
+        "city": "Ingolstadt",
+        "date_time": "22.11.2025, 11:45",
+        "location": "Anglerclub Ingolstadt e.V.",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Mindelheim",
+        "date_time": "22.11.2025, 11:45",
+        "location": "Staatl. Berufsschule Mindelheim",
+        "region": "Schwaben",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 12:15",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Ingolstadt",
+        "date_time": "22.11.2025, 13:00",
+        "location": "Anglerclub Ingolstadt e.V.",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 13:30",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "München",
+        "date_time": "22.11.2025, 14:45",
+        "location": "Industrie- und Handelskammer IHK Campus",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Passau",
+        "date_time": "29.11.2025, 08:00",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "29.11.2025, 08:00",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Augsburg",
+        "date_time": "29.11.2025, 09:15",
+        "location": "BIB Augsburg gGmbH, Augsburg",
+        "region": "Schwaben",
+        "status": "Frei"
+      },
+      {
+        "city": "Weilheim i. OB",
+        "date_time": "29.11.2025, 09:15",
+        "location": "BIB Augsburg gGmbH, Weilheim",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Passau",
+        "date_time": "29.11.2025, 09:15",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Rosenheim",
+        "date_time": "29.11.2025, 09:15",
+        "location": "Bildungszentrum Rosenheim",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Traunstein",
+        "date_time": "29.11.2025, 09:15",
+        "location": "HWK Bildungszentrum Traunstein",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Mühldorf am Inn",
+        "date_time": "29.11.2025, 09:15",
+        "location": "VHS Mühldorf",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "29.11.2025, 09:15",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Freising",
+        "date_time": "29.11.2025, 09:15",
+        "location": "cbz - Computer Bildungszentrum, Freising",
+        "region": "Oberbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Passau",
+        "date_time": "29.11.2025, 10:30",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Belegt"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "29.11.2025, 10:30",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      },
+      {
+        "city": "Passau",
+        "date_time": "29.11.2025, 11:45",
+        "location": "Bezirksfischereiverein Passau, Passau",
+        "region": "Niederbayern",
+        "status": "Frei"
+      },
+      {
+        "city": "Bamberg",
+        "date_time": "29.11.2025, 11:45",
+        "location": "bfz Bamberg gGmbH",
+        "region": "Oberfranken",
+        "status": "Belegt"
+      }
+    ],
+    "total_count": 68
+  }
+]

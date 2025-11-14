@@ -1,17 +1,16 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (6):**
-22.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Belegt
-29.11.2025, 08:00 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Belegt
-29.11.2025, 09:15 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Belegt
-29.11.2025, 10:30 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Frei
-29.11.2025, 13:00 | bfz Bamberg gGmbH | Bamberg | Frei
+🆕 **New appointments (3):**
+15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+22.11.2025, 13:00 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
+29.11.2025, 11:45 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
 
-❌ **Removed appointments (2):**
-22.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Frei
-22.11.2025, 11:00 | Industrie- und Handelskammer IHK Campus | München | Frei
+❌ **Removed appointments (4):**
+13.11.2025, 17:45 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Belegt
+13.11.2025, 19:00 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Frei
+15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+29.11.2025, 11:45 | Bezirksfischereiverein Passau, Passau | Passau | Frei
 
 🔄 **Status changes:**
 
-Summary: 6 new, 2 removed appointments
+Summary: 3 new, 4 removed appointments

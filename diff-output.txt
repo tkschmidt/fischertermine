@@ -1,16 +1,29 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (3):**
-15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-22.11.2025, 13:00 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
-29.11.2025, 11:45 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+🆕 **New appointments (15):**
+15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+22.11.2025, 09:00 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Belegt
+22.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
+22.11.2025, 10:15 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
+22.11.2025, 10:15 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+22.11.2025, 11:30 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
+22.11.2025, 11:30 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
+22.11.2025, 11:30 | VHS Weiden | Weiden | Belegt
+22.11.2025, 12:45 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+22.11.2025, 14:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
+... and 5 more
 
-❌ **Removed appointments (4):**
-13.11.2025, 17:45 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Belegt
-13.11.2025, 19:00 | Zweckverband Landwirtschaftsschule Kempten | Kempten (Allgäu) | Frei
-15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-29.11.2025, 11:45 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+❌ **Removed appointments (9):**
+14.11.2025, 12:00 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+14.11.2025, 13:15 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+14.11.2025, 14:30 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
+15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+22.11.2025, 11:30 | VHS Weiden | Weiden | Frei
+29.11.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Frei
+29.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
+29.11.2025, 09:15 | BIB Augsburg gGmbH, Weilheim | Weilheim i. OB | Frei
+29.11.2025, 10:30 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Frei
 
 🔄 **Status changes:**
 
-Summary: 3 new, 4 removed appointments
+Summary: 15 new, 9 removed appointments

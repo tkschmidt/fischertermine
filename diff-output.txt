@@ -1,29 +1,24 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (15):**
-15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-22.11.2025, 09:00 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Belegt
-22.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
-22.11.2025, 10:15 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
-22.11.2025, 10:15 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-22.11.2025, 11:30 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
-22.11.2025, 11:30 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
-22.11.2025, 11:30 | VHS Weiden | Weiden | Belegt
-22.11.2025, 12:45 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-22.11.2025, 14:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
-... and 5 more
+🆕 **New appointments (4):**
+22.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+22.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+29.11.2025, 09:15 | Bildungszentrum Rosenheim | Rosenheim | Belegt
+29.11.2025, 09:15 | VHS Mühldorf | Mühldorf am Inn | Belegt
 
-❌ **Removed appointments (9):**
-14.11.2025, 12:00 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-14.11.2025, 13:15 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-14.11.2025, 14:30 | Bezirksfischereiverein Passau, Passau | Passau | Belegt
-15.11.2025, 13:00 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-22.11.2025, 11:30 | VHS Weiden | Weiden | Frei
-29.11.2025, 08:00 | Bezirksfischereiverein Passau, Passau | Passau | Frei
-29.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Frei
-29.11.2025, 09:15 | BIB Augsburg gGmbH, Weilheim | Weilheim i. OB | Frei
-29.11.2025, 10:30 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Frei
+❌ **Removed appointments (30):**
+15.11.2025, 08:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
+15.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+15.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
+15.11.2025, 09:15 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
+15.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
+15.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
+15.11.2025, 09:15 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Belegt
+15.11.2025, 10:15 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+15.11.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
+... and 20 more
 
 🔄 **Status changes:**
 
-Summary: 15 new, 9 removed appointments
+Summary: 4 new, 30 removed appointments

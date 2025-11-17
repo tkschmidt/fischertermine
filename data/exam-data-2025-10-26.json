@@ -1,28 +1,26 @@
-[
-  {
-    "exam_appointments": [
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 08:00",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Frei"
-      },
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 09:15",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Frei"
-      },
-      {
-        "city": "Bayreuth",
-        "date_time": "15.11.2025, 08:00",
-        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
-        "region": "Oberfranken",
-        "status": "Frei"
-      }
-    ],
-    "total_count": 3
-  }
-]
+{
+  "exam_appointments": [
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 08:00",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Frei"
+    },
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 09:15",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Frei"
+    },
+    {
+      "city": "Bayreuth",
+      "date_time": "15.11.2025, 08:00",
+      "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+      "region": "Oberfranken",
+      "status": "Frei"
+    }
+  ],
+  "total_count": 3
+}

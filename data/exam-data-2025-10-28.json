@@ -1,112 +1,110 @@
-[
-  {
-    "exam_appointments": [
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 08:00",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Belegt"
-      },
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 09:15",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Belegt"
-      },
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 10:30",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Belegt"
-      },
-      {
-        "city": "Nürnberg",
-        "date_time": "29.10.2025, 11:45",
-        "location": "Haus der Fischerei - Nürnberg",
-        "region": "Mittelfranken",
-        "status": "Frei"
-      },
-      {
-        "city": "Bayreuth",
-        "date_time": "15.11.2025, 08:00",
-        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
-        "region": "Oberfranken",
-        "status": "Belegt"
-      },
-      {
-        "city": "Landsberg am Lech",
-        "date_time": "15.11.2025, 09:15",
-        "location": "Agrarbildungszentrum Landsberg am Lech",
-        "region": "Oberbayern",
-        "status": "Belegt"
-      },
-      {
-        "city": "Bayreuth",
-        "date_time": "15.11.2025, 09:15",
-        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
-        "region": "Oberfranken",
-        "status": "Frei"
-      },
-      {
-        "city": "Augsburg",
-        "date_time": "15.11.2025, 09:15",
-        "location": "BIB Augsburg gGmbH, Augsburg",
-        "region": "Schwaben",
-        "status": "Belegt"
-      },
-      {
-        "city": "Neu-Ulm",
-        "date_time": "15.11.2025, 09:15",
-        "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
-        "region": "Schwaben",
-        "status": "Frei"
-      },
-      {
-        "city": "Landsberg am Lech",
-        "date_time": "15.11.2025, 10:30",
-        "location": "Agrarbildungszentrum Landsberg am Lech",
-        "region": "Oberbayern",
-        "status": "Frei"
-      },
-      {
-        "city": "Bayreuth",
-        "date_time": "15.11.2025, 10:30",
-        "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
-        "region": "Oberfranken",
-        "status": "Frei"
-      },
-      {
-        "city": "Augsburg",
-        "date_time": "15.11.2025, 10:30",
-        "location": "BIB Augsburg gGmbH, Augsburg",
-        "region": "Schwaben",
-        "status": "Belegt"
-      },
-      {
-        "city": "Augsburg",
-        "date_time": "15.11.2025, 11:45",
-        "location": "BIB Augsburg gGmbH, Augsburg",
-        "region": "Schwaben",
-        "status": "Frei"
-      },
-      {
-        "city": "Weiden",
-        "date_time": "22.11.2025, 09:00",
-        "location": "VHS Weiden",
-        "region": "Oberpfalz",
-        "status": "Frei"
-      },
-      {
-        "city": "Regenstauf",
-        "date_time": "22.11.2025, 09:15",
-        "location": "Eckert Schulen AG, Regenstauf",
-        "region": "Oberpfalz",
-        "status": "Frei"
-      }
-    ],
-    "total_count": 15
-  }
-]
+{
+  "exam_appointments": [
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 08:00",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Belegt"
+    },
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 09:15",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Belegt"
+    },
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 10:30",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Belegt"
+    },
+    {
+      "city": "Nürnberg",
+      "date_time": "29.10.2025, 11:45",
+      "location": "Haus der Fischerei - Nürnberg",
+      "region": "Mittelfranken",
+      "status": "Frei"
+    },
+    {
+      "city": "Bayreuth",
+      "date_time": "15.11.2025, 08:00",
+      "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+      "region": "Oberfranken",
+      "status": "Belegt"
+    },
+    {
+      "city": "Landsberg am Lech",
+      "date_time": "15.11.2025, 09:15",
+      "location": "Agrarbildungszentrum Landsberg am Lech",
+      "region": "Oberbayern",
+      "status": "Belegt"
+    },
+    {
+      "city": "Bayreuth",
+      "date_time": "15.11.2025, 09:15",
+      "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+      "region": "Oberfranken",
+      "status": "Frei"
+    },
+    {
+      "city": "Augsburg",
+      "date_time": "15.11.2025, 09:15",
+      "location": "BIB Augsburg gGmbH, Augsburg",
+      "region": "Schwaben",
+      "status": "Belegt"
+    },
+    {
+      "city": "Neu-Ulm",
+      "date_time": "15.11.2025, 09:15",
+      "location": "Kolping-Bildungswerk gGmbH in der Diözese Augsburg",
+      "region": "Schwaben",
+      "status": "Frei"
+    },
+    {
+      "city": "Landsberg am Lech",
+      "date_time": "15.11.2025, 10:30",
+      "location": "Agrarbildungszentrum Landsberg am Lech",
+      "region": "Oberbayern",
+      "status": "Frei"
+    },
+    {
+      "city": "Bayreuth",
+      "date_time": "15.11.2025, 10:30",
+      "location": "BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz",
+      "region": "Oberfranken",
+      "status": "Frei"
+    },
+    {
+      "city": "Augsburg",
+      "date_time": "15.11.2025, 10:30",
+      "location": "BIB Augsburg gGmbH, Augsburg",
+      "region": "Schwaben",
+      "status": "Belegt"
+    },
+    {
+      "city": "Augsburg",
+      "date_time": "15.11.2025, 11:45",
+      "location": "BIB Augsburg gGmbH, Augsburg",
+      "region": "Schwaben",
+      "status": "Frei"
+    },
+    {
+      "city": "Weiden",
+      "date_time": "22.11.2025, 09:00",
+      "location": "VHS Weiden",
+      "region": "Oberpfalz",
+      "status": "Frei"
+    },
+    {
+      "city": "Regenstauf",
+      "date_time": "22.11.2025, 09:15",
+      "location": "Eckert Schulen AG, Regenstauf",
+      "region": "Oberpfalz",
+      "status": "Frei"
+    }
+  ],
+  "total_count": 15
+}

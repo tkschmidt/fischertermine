@@ -15,6 +15,7 @@ jobs:
     outputs:
       changes: ${{ steps.changes.outputs.changes }}
       freising_available: ${{ steps.changes.outputs.freising_available }}
+      pr_number: ${{ steps.create_pr.outputs.pull-request-number }}
 
     steps:
     - name: Checkout code
@@ -101,10 +102,11 @@ jobs:
         fi
 
         # Check for available appointments in Freising
-        FREISING_AVAILABLE=$(jq -r '.[0].exam_appointments[] | select(.city | test("Freising"; "i")) | select(.status | test("Frei"; "i")) | .date_time' current-data.json | wc -l)
+        FREISING_AVAILABLE=$(jq -r '.exam_appointments[] | select(.city | test("Freising"; "i")) | select(.status | test("Frei"; "i")) | .date_time' current-data.json | wc -l)
         echo "freising_available=$FREISING_AVAILABLE" >> $GITHUB_OUTPUT
 
     - name: Create Pull Request
+      id: create_pr
       if: steps.changes.outputs.changes == 'true'
       uses: peter-evans/create-pull-request@v5
       with:
@@ -130,6 +132,13 @@ jobs:
           Please review the changes before merging.
         branch: update-exam-data-${{ github.run_number }}
         delete-branch: true
+
+    - name: Enable auto-merge
+      if: steps.create_pr.outputs.pull-request-number
+      env:
+        GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --auto --merge
 
     - name: Cleanup temp files
       if: always()

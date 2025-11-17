@@ -43,6 +43,7 @@ type ExamAppointment struct {
 type OutputData struct {
 	ExamAppointments []ExamAppointment `json:"exam_appointments"`
 	TotalCount       int               `json:"total_count"`
+	ScrapedAt        string            `json:"scraped_at"`
 }
 
 func min(a, b int) int {
@@ -504,10 +505,11 @@ func main() {
 	// Sort the exam data
 	sortExamData(examData)
 
-	// Create output
+	// Create output with timestamp
 	output := OutputData{
 		ExamAppointments: examData,
 		TotalCount:       len(examData),
+		ScrapedAt:        time.Now().UTC().Format(time.RFC3339),
 	}
 
 	jsonOutput, err := json.MarshalIndent(output, "", "  ")

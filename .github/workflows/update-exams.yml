@@ -2,7 +2,7 @@ name: Update Exam Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run at midnight UTC every day
+    - cron: '0 */2 * * *'  # Run every 2 hours
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -138,7 +138,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
       run: |
-        gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --auto --merge
+        gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --auto --merge --delete-branch
 
     - name: Cleanup temp files
       if: always()

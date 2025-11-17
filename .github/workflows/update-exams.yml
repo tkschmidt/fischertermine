@@ -46,12 +46,12 @@ jobs:
         # Get current date
         DATE=$(date '+%Y-%m-%d')
 
-        # Calculate MD5 of new data
-        NEW_MD5=$(md5sum current-data.json | cut -d' ' -f1)
+        # Calculate MD5 of only exam_appointments (ignore timestamp and total_count)
+        NEW_MD5=$(jq -S '.exam_appointments' current-data.json | md5sum | cut -d' ' -f1)
 
         # Check if latest.json exists and compare MD5
         if [ -f "data/latest.json" ]; then
-          OLD_MD5=$(md5sum data/latest.json | cut -d' ' -f1)
+          OLD_MD5=$(jq -S '.exam_appointments' data/latest.json | md5sum | cut -d' ' -f1)
           echo "Old MD5: $OLD_MD5"
           echo "New MD5: $NEW_MD5"
           if [ "$NEW_MD5" = "$OLD_MD5" ]; then

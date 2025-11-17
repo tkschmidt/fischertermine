@@ -1,24 +1,31 @@
 📊 Changes detected between versions:
 
-🆕 **New appointments (4):**
-22.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-22.11.2025, 10:30 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-29.11.2025, 09:15 | Bildungszentrum Rosenheim | Rosenheim | Belegt
-29.11.2025, 09:15 | VHS Mühldorf | Mühldorf am Inn | Belegt
+🆕 **New appointments (11):**
+22.11.2025, 10:15 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Belegt
+22.11.2025, 10:30 | Eckert Schulen AG, Regenstauf | Regenstauf | Belegt
+22.11.2025, 10:30 | Grund- und Mittelschule Schweitenkirchen | Schweitenkirchen | Belegt
+22.11.2025, 11:30 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Belegt
+22.11.2025, 13:00 | Staatl. Berufsschule Mindelheim | Mindelheim | Belegt
+22.11.2025, 14:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
+22.11.2025, 14:45 | Industrie- und Handelskammer IHK Campus | München | Belegt
+29.11.2025, 09:15 | HWK Bildungszentrum Traunstein | Traunstein | Belegt
+29.11.2025, 09:15 | cbz - Computer Bildungszentrum, Freising | Freising | Belegt
+29.11.2025, 11:45 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Belegt
+... and 1 more
 
-❌ **Removed appointments (30):**
-15.11.2025, 08:00 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
-15.11.2025, 08:00 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-15.11.2025, 09:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-15.11.2025, 09:15 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Frei
-15.11.2025, 09:15 | BFZ Bayreuth-Hintereingang-Cafeteria-Parkplatz | Bayreuth | Belegt
-15.11.2025, 09:15 | BIB Augsburg gGmbH, Augsburg | Augsburg | Belegt
-15.11.2025, 09:15 | Haus der Fischerei - Nürnberg | Nürnberg | Belegt
-15.11.2025, 09:15 | Kolping-Bildungswerk gGmbH in der Diözese Augsburg | Neu-Ulm | Belegt
-15.11.2025, 10:15 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Belegt
-15.11.2025, 10:30 | Agrarbildungszentrum Landsberg am Lech | Landsberg am Lech | Belegt
-... and 20 more
+❌ **Removed appointments (11):**
+22.11.2025, 10:15 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
+22.11.2025, 10:30 | Eckert Schulen AG, Regenstauf | Regenstauf | Frei
+22.11.2025, 10:30 | Grund- und Mittelschule Schweitenkirchen | Schweitenkirchen | Frei
+22.11.2025, 11:30 | Anton-Balster-Mittelschule, Neustadt a.d. Donau | Neustadt an der Donau | Frei
+22.11.2025, 13:00 | Staatl. Berufsschule Mindelheim | Mindelheim | Frei
+22.11.2025, 14:00 | IFP Gesellschaft f. Fortbildung u. Personalentw. mbH, Straubing | Straubing | Frei
+22.11.2025, 14:45 | Industrie- und Handelskammer IHK Campus | München | Frei
+29.11.2025, 09:15 | HWK Bildungszentrum Traunstein | Traunstein | Frei
+29.11.2025, 09:15 | cbz - Computer Bildungszentrum, Freising | Freising | Frei
+29.11.2025, 11:45 | Bayer. Landesanstalt für Wein- und Gartenbau, Veitshöchheim | Veitshöchheim | Frei
+... and 1 more
 
 🔄 **Status changes:**
 
-Summary: 4 new, 30 removed appointments
+Summary: 11 new, 11 removed appointments

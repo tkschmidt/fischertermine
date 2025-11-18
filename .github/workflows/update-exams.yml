@@ -180,7 +180,7 @@ jobs:
       with:
         name: analysis-report
         path: |
-          analysis.html
+          index.html
           plots/
         retention-days: 30
 

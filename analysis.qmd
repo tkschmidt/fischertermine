@@ -14,6 +14,7 @@ format:
     page-layout: full
     fig-width: 14
     fig-height: 8
+    output-file: index.html
 execute:
   echo: false
   warning: false
@@ -82,10 +83,11 @@ for (json_file in json_files) {
 # Combine all data
 dt <- rbindlist(all_data, fill = TRUE)
 
-# Aggregate by location and scrape date
+# Aggregate by location, region, and scrape date
 dt_agg <- dt[, .(
   total_free_spots = sum(free_spots, na.rm = TRUE),
-  total_appointments = .N
+  total_appointments = .N,
+  region = first(region)
 ), by = .(location, scrape_date)]
 
 # Sort by scrape date
@@ -113,36 +115,40 @@ cat(sprintf("- **Total observations:** %s location-time combinations\n", format(
 This chart shows the number of free exam spots across all tracked locations over time.
 
 ```{r plot-all-locations}
-#| fig-cap: "Free exam spots over time by location"
+#| fig-cap: "Free exam spots over time by location, split by region"
+#| fig-height: 12
 
 p1 <- ggplot(dt_agg, aes(x = scrape_date, y = total_free_spots, color = location, group = location)) +
   geom_line(linewidth = 0.8, alpha = 0.7) +
   geom_point(size = 1.5, alpha = 0.6) +
+  facet_wrap(~ region, ncol = 2, scales = "free_y") +
   labs(
     title = "Free Exam Spots Over Time by Location",
-    subtitle = "All tracked locations",
+    subtitle = "Split by region",
     x = "Date",
     y = "Number of Free Spots",
     color = "Location"
   ) +
-  theme_minimal(base_size = 14) +
+  theme_minimal(base_size = 12) +
   theme(
     plot.title = element_text(size = 18, face = "bold"),
     plot.subtitle = element_text(size = 14, color = "gray40"),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "right",
-    legend.text = element_text(size = 9),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+    legend.position = "bottom",
+    legend.text = element_text(size = 8),
     panel.grid.minor = element_blank(),
     panel.background = element_rect(fill = "white"),
-    plot.background = element_rect(fill = "white")
+    plot.background = element_rect(fill = "white"),
+    strip.text = element_text(size = 12, face = "bold")
   ) +
   scale_x_datetime(date_breaks = "3 days", date_labels = "%b %d") +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10))
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 8)) +
+  guides(color = guide_legend(ncol = 3))
 
 print(p1)
 
 # Save plot
-ggsave("plots/free_spots_by_location.png", p1, width = 16, height = 10, dpi = 300, bg = "white")
+ggsave("plots/free_spots_by_location.png", p1, width = 16, height = 14, dpi = 300, bg = "white")
 ```
 
 ## Top 10 Locations by Average Free Spots
@@ -150,7 +156,8 @@ ggsave("plots/free_spots_by_location.png", p1, width = 16, height = 10, dpi = 30
 Focusing on locations with the highest average availability.
 
 ```{r plot-top10}
-#| fig-cap: "Top 10 locations with most available spots"
+#| fig-cap: "Top 10 locations with most available spots, split by region"
+#| fig-height: 12
 
 # Calculate top locations
 top_locations <- dt_agg[, .(avg_free_spots = mean(total_free_spots)), by = location][
@@ -162,31 +169,34 @@ dt_top <- dt_agg[location %in% top_locations$location]
 p2 <- ggplot(dt_top, aes(x = scrape_date, y = total_free_spots, color = location, group = location)) +
   geom_line(linewidth = 1.2, alpha = 0.8) +
   geom_point(size = 2.5, alpha = 0.7) +
+  facet_wrap(~ region, ncol = 2, scales = "free_y") +
   labs(
     title = "Free Exam Spots Over Time - Top 10 Locations",
-    subtitle = "Locations with highest average free spots",
+    subtitle = "Locations with highest average free spots, grouped by region",
     x = "Date",
     y = "Number of Free Spots",
     color = "Location"
   ) +
-  theme_minimal(base_size = 14) +
+  theme_minimal(base_size = 12) +
   theme(
     plot.title = element_text(size = 18, face = "bold"),
     plot.subtitle = element_text(size = 14, color = "gray40"),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "right",
-    legend.text = element_text(size = 10),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+    legend.position = "bottom",
+    legend.text = element_text(size = 9),
     panel.grid.minor = element_blank(),
     panel.background = element_rect(fill = "white"),
-    plot.background = element_rect(fill = "white")
+    plot.background = element_rect(fill = "white"),
+    strip.text = element_text(size = 12, face = "bold")
   ) +
   scale_x_datetime(date_breaks = "3 days", date_labels = "%b %d") +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 10))
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 8)) +
+  guides(color = guide_legend(ncol = 3))
 
 print(p2)
 
 # Save plot
-ggsave("plots/free_spots_top10_locations.png", p2, width = 16, height = 10, dpi = 300, bg = "white")
+ggsave("plots/free_spots_top10_locations.png", p2, width = 16, height = 14, dpi = 300, bg = "white")
 ```
 
 ## Location Summary Table

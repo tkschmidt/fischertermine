@@ -29,3 +29,24 @@ The JSON output contains exam appointments with:
 - Exam center location
 - City and region
 - Availability status (Frei/Belegt)
+
+## Data Analysis
+
+To analyze the historical exam data:
+
+```bash
+# Option 1: Use Homebrew R with pre-built packages
+brew install r
+R -e "install.packages(c('data.table', 'jsonlite', 'rmarkdown'), repos = 'https://cran.rstudio.com')"
+
+# Option 2: Install specific versions that avoid compilation
+R -e "install.packages('jsonlite', repos = 'https://cran.rstudio.com'); install.packages('data.table', repos = 'https://cran.rstudio.com'); install.packages('rmarkdown', repos = 'https://cran.rstudio.com')"
+
+# Generate analysis report
+Rscript -e "rmarkdown::render('analysis.Rmd')"
+```
+
+This creates an HTML report (`analysis.html`) that:
+- Combines all JSON files into a single data.table
+- Tracks availability changes over time
+- Shows exam appointment trends by location and date

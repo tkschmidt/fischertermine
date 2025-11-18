@@ -1,0 +1,64 @@
+name: Deploy Analysis to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  analyze-and-deploy:
+    runs-on: ubuntu-latest
+
+    container:
+      image: rocker/tidyverse:latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install R dependencies
+      run: |
+        Rscript -e 'install.packages(c("data.table", "jsonlite", "lubridate"), repos="https://cloud.r-project.org")'
+
+    - name: Install Quarto
+      run: |
+        apt-get update
+        apt-get install -y curl gdebi-core
+        curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+        gdebi --non-interactive quarto-linux-amd64.deb
+
+    - name: Create output directories
+      run: |
+        mkdir -p plots
+        mkdir -p _site
+
+    - name: Render Quarto document
+      run: |
+        quarto render analysis.qmd --output-dir _site
+
+    - name: Copy plots to site directory
+      run: |
+        cp -r plots/* _site/ || true
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '_site'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

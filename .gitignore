@@ -1,2 +1,17 @@
 current-data.json
 .DS_Store
+
+# R and Quarto generated files
+analysis.html
+plots/
+_site/
+*.Rproj
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto cache
+/.quarto/
+*_cache/
+*_files/

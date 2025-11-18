@@ -144,6 +144,46 @@ jobs:
       if: always()
       run: rm -f current-data.json diff-output.txt
 
+  analyze:
+    runs-on: ubuntu-latest
+    needs: update-data
+    if: needs.update-data.outputs.changes == 'true'
+
+    container:
+      image: rocker/tidyverse:latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install R dependencies
+      run: |
+        Rscript -e 'install.packages(c("data.table", "jsonlite", "lubridate"), repos="https://cloud.r-project.org")'
+
+    - name: Install Quarto
+      run: |
+        apt-get update
+        apt-get install -y curl gdebi-core
+        curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+        gdebi --non-interactive quarto-linux-amd64.deb
+
+    - name: Create output directories
+      run: |
+        mkdir -p plots
+
+    - name: Render Quarto document
+      run: |
+        quarto render analysis.qmd
+
+    - name: Upload analysis as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: analysis-report
+        path: |
+          analysis.html
+          plots/
+        retention-days: 30
+
   notify:
     runs-on: ubuntu-latest
     needs: update-data

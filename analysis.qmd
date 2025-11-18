@@ -142,7 +142,9 @@ p1 <- ggplot(dt_agg, aes(x = scrape_date, y = free_spots, color = exam_id, group
     plot.background = element_rect(fill = "white"),
     strip.text = element_text(size = 9, face = "bold")
   ) +
-  scale_x_datetime(date_breaks = "12 hours", date_labels = "%b %d\n%H:%M") +
+  scale_x_datetime(date_breaks = "12 hours",
+                   date_minor_breaks = "2 hours",
+                   date_labels = "%b %d\n%H:%M") +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 6))
 
 print(p1)
@@ -188,7 +190,9 @@ p2 <- ggplot(dt_top, aes(x = scrape_date, y = free_spots, color = exam_id, group
     plot.background = element_rect(fill = "white"),
     strip.text = element_text(size = 10, face = "bold")
   ) +
-  scale_x_datetime(date_breaks = "12 hours", date_labels = "%b %d\n%H:%M") +
+  scale_x_datetime(date_breaks = "12 hours",
+                   date_minor_breaks = "2 hours",
+                   date_labels = "%b %d\n%H:%M") +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 6))
 
 print(p2)

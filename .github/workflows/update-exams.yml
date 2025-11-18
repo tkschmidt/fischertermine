@@ -158,7 +158,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        Rscript -e 'install.packages(c("data.table", "jsonlite", "lubridate"), repos="https://cloud.r-project.org")'
+        Rscript -e 'install.packages(c("data.table", "jsonlite", "lubridate", "DT"), repos="https://cloud.r-project.org")'
 
     - name: Install Quarto
       run: |
@@ -188,6 +188,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: update-data
     if: needs.update-data.outputs.changes == 'true' && needs.update-data.outputs.freising_available > 0
+    continue-on-error: true
 
     steps:
     - name: Send Pushover notification

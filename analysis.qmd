@@ -83,15 +83,17 @@ for (json_file in json_files) {
 # Combine all data
 dt <- rbindlist(all_data, fill = TRUE)
 
-# Aggregate by location, region, and scrape date
-dt_agg <- dt[, .(
-  total_free_spots = sum(free_spots, na.rm = TRUE),
-  total_appointments = .N,
-  region = first(region)
-), by = .(location, scrape_date)]
+# Create unique exam identifier (specific exam slot)
+dt[, exam_id := paste(exam_date, exam_start_time, location, sep = " | ")]
 
-# Sort by scrape date
-setorder(dt_agg, scrape_date)
+# Keep only the columns we need for plotting
+dt_agg <- dt[, .(exam_id, scrape_date, free_spots, region, location, exam_date, exam_start_time)]
+
+# Remove any potential duplicates (same exam_id at same scrape_date)
+dt_agg <- unique(dt_agg, by = c("exam_id", "scrape_date"))
+
+# Sort by exam_id and scrape_date for proper line plotting
+setorder(dt_agg, exam_id, scrape_date)
 ```
 
 ## Key Statistics
@@ -115,40 +117,38 @@ cat(sprintf("- **Total observations:** %s location-time combinations\n", format(
 This chart shows the number of free exam spots across all tracked locations over time.
 
 ```{r plot-all-locations}
-#| fig-cap: "Free exam spots over time by location, split by region"
-#| fig-height: 12
+#| fig-cap: "Free spots for each exam appointment over time, split by region and location"
+#| fig-height: 20
 
-p1 <- ggplot(dt_agg, aes(x = scrape_date, y = total_free_spots, color = location, group = location)) +
-  geom_line(linewidth = 0.8, alpha = 0.7) +
+p1 <- ggplot(dt_agg, aes(x = scrape_date, y = free_spots, color = exam_id, group = exam_id)) +
+  geom_line(linewidth = 0.8, alpha = 0.8) +
   geom_point(size = 1.5, alpha = 0.6) +
-  facet_wrap(~ region, ncol = 2, scales = "free_y") +
+  facet_wrap(~ region + location, ncol = 3, scales = "free_y") +
   labs(
-    title = "Free Exam Spots Over Time by Location",
-    subtitle = "Split by region",
-    x = "Date",
-    y = "Number of Free Spots",
-    color = "Location"
+    title = "Free Spots Per Exam Appointment Over Time",
+    subtitle = "Each line represents a specific exam (date + time), split by region and location",
+    x = "Scrape Date & Time (UTC)",
+    y = "Number of Free Spots"
   ) +
-  theme_minimal(base_size = 12) +
+  theme_minimal(base_size = 10) +
   theme(
-    plot.title = element_text(size = 18, face = "bold"),
-    plot.subtitle = element_text(size = 14, color = "gray40"),
-    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-    legend.position = "bottom",
-    legend.text = element_text(size = 8),
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 11, color = "gray40"),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 7),
+    axis.text.y = element_text(size = 8),
+    legend.position = "none",
     panel.grid.minor = element_blank(),
     panel.background = element_rect(fill = "white"),
     plot.background = element_rect(fill = "white"),
-    strip.text = element_text(size = 12, face = "bold")
+    strip.text = element_text(size = 9, face = "bold")
   ) +
-  scale_x_datetime(date_breaks = "3 days", date_labels = "%b %d") +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 8)) +
-  guides(color = guide_legend(ncol = 3))
+  scale_x_datetime(date_breaks = "12 hours", date_labels = "%b %d\n%H:%M") +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 6))
 
 print(p1)
 
 # Save plot
-ggsave("plots/free_spots_by_location.png", p1, width = 16, height = 14, dpi = 300, bg = "white")
+ggsave("plots/free_spots_by_location.png", p1, width = 18, height = 24, dpi = 300, bg = "white")
 ```
 
 ## Top 10 Locations by Average Free Spots
@@ -156,70 +156,73 @@ ggsave("plots/free_spots_by_location.png", p1, width = 16, height = 14, dpi = 30
 Focusing on locations with the highest average availability.
 
 ```{r plot-top10}
-#| fig-cap: "Top 10 locations with most available spots, split by region"
-#| fig-height: 12
+#| fig-cap: "Top 10 exam appointments with most available spots, split by region and location"
+#| fig-height: 16
 
-# Calculate top locations
-top_locations <- dt_agg[, .(avg_free_spots = mean(total_free_spots)), by = location][
+# Calculate top exams by average free spots
+top_exams <- dt_agg[, .(avg_free_spots = mean(free_spots)), by = exam_id][
   order(-avg_free_spots)
 ][1:min(10, .N)]
 
-dt_top <- dt_agg[location %in% top_locations$location]
+dt_top <- dt_agg[exam_id %in% top_exams$exam_id]
 
-p2 <- ggplot(dt_top, aes(x = scrape_date, y = total_free_spots, color = location, group = location)) +
+p2 <- ggplot(dt_top, aes(x = scrape_date, y = free_spots, color = exam_id, group = exam_id)) +
   geom_line(linewidth = 1.2, alpha = 0.8) +
-  geom_point(size = 2.5, alpha = 0.7) +
-  facet_wrap(~ region, ncol = 2, scales = "free_y") +
+  geom_point(size = 2.0, alpha = 0.7) +
+  facet_wrap(~ region + location, ncol = 3, scales = "free_y") +
   labs(
-    title = "Free Exam Spots Over Time - Top 10 Locations",
-    subtitle = "Locations with highest average free spots, grouped by region",
-    x = "Date",
-    y = "Number of Free Spots",
-    color = "Location"
+    title = "Free Spots Over Time - Top 10 Exam Appointments",
+    subtitle = "Specific exam slots with highest average free spots, split by region and location",
+    x = "Scrape Date & Time (UTC)",
+    y = "Number of Free Spots"
   ) +
-  theme_minimal(base_size = 12) +
+  theme_minimal(base_size = 11) +
   theme(
-    plot.title = element_text(size = 18, face = "bold"),
-    plot.subtitle = element_text(size = 14, color = "gray40"),
-    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
-    legend.position = "bottom",
-    legend.text = element_text(size = 9),
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 11, color = "gray40"),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),
+    axis.text.y = element_text(size = 9),
+    legend.position = "none",
     panel.grid.minor = element_blank(),
     panel.background = element_rect(fill = "white"),
     plot.background = element_rect(fill = "white"),
-    strip.text = element_text(size = 12, face = "bold")
+    strip.text = element_text(size = 10, face = "bold")
   ) +
-  scale_x_datetime(date_breaks = "3 days", date_labels = "%b %d") +
-  scale_y_continuous(breaks = scales::pretty_breaks(n = 8)) +
-  guides(color = guide_legend(ncol = 3))
+  scale_x_datetime(date_breaks = "12 hours", date_labels = "%b %d\n%H:%M") +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 6))
 
 print(p2)
 
 # Save plot
-ggsave("plots/free_spots_top10_locations.png", p2, width = 16, height = 14, dpi = 300, bg = "white")
+ggsave("plots/free_spots_top10_locations.png", p2, width = 18, height = 20, dpi = 300, bg = "white")
 ```
 
-## Location Summary Table
+## Exam Appointment Summary Table
 
-Statistical summary showing minimum, average, and maximum free spots per location.
+Statistical summary showing minimum, average, and maximum free spots per exam appointment.
 
 ```{r summary-table}
-# Create summary table
+# Create summary table for individual exams
 summary_table <- dt_agg[, .(
-  min_free_spots = min(total_free_spots),
-  avg_free_spots = round(mean(total_free_spots), 1),
-  max_free_spots = max(total_free_spots),
-  total_observations = .N
-), by = location][order(-avg_free_spots)]
+  exam_date = first(exam_date),
+  exam_time = first(exam_start_time),
+  location = first(location),
+  region = first(region),
+  min_free_spots = min(free_spots),
+  avg_free_spots = round(mean(free_spots), 1),
+  max_free_spots = max(free_spots),
+  observations = .N
+), by = exam_id][order(-avg_free_spots)]
 
 # Save CSV
 fwrite(summary_table, "plots/location_summary.csv")
 
-# Display table
-kable(summary_table,
-      col.names = c("Location", "Min Free Spots", "Avg Free Spots", "Max Free Spots", "Observations"),
-      align = c("l", "r", "r", "r", "r"),
-      caption = "Summary statistics by location")
+# Display top 20
+kable(head(summary_table, 20),
+      col.names = c("Exam ID", "Exam Date", "Time", "Location", "Region",
+                    "Min", "Avg", "Max", "Obs"),
+      align = c("l", "l", "l", "l", "l", "r", "r", "r", "r"),
+      caption = "Top 20 exam appointments by average free spots")
 ```
 
 ---

@@ -3,6 +3,7 @@ current-data.json
 
 # R and Quarto generated files
 analysis.html
+index.html
 plots/
 _site/
 *.Rproj

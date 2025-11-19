@@ -29,3 +29,9 @@ The JSON output contains exam appointments with:
 - City and region
 - Availability status (Frei/Belegt)
 
+## Documentation
+
+- [GITHUB_ACTIONS.md](GITHUB_ACTIONS.md) - Detailed documentation about the automated workflows, deployment pipeline, and troubleshooting
+- [CLAUDE.md](CLAUDE.md) - Project context for Claude Code
+- [JSF_EXPLANATION.md](JSF_EXPLANATION.md) - Technical details about the JSF website structure
+

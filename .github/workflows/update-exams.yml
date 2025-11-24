@@ -16,6 +16,7 @@ jobs:
     outputs:
       changes: ${{ steps.changes.outputs.changes }}
       freising_available: ${{ steps.changes.outputs.freising_available }}
+      freising_dates: ${{ steps.changes.outputs.freising_dates }}
       pr_number: ${{ steps.create_pr.outputs.pull-request-number }}
 
     steps:
@@ -105,6 +106,10 @@ jobs:
         # Check for available appointments in Freising
         FREISING_AVAILABLE=$(jq -r '.exam_appointments[] | select(.city | test("Freising"; "i")) | select(.status | test("Frei"; "i")) | .date_time' current-data.json | wc -l)
         echo "freising_available=$FREISING_AVAILABLE" >> $GITHUB_OUTPUT
+
+        # Extract dates and available spots for Freising appointments
+        FREISING_DATES=$(jq -r '.exam_appointments[] | select(.city | test("Freising"; "i")) | select(.status | test("Frei"; "i")) | "\(.date_time) (\((.max_participants | tonumber) - (.current_participants | tonumber)) spots)"' current-data.json | paste -sd ", " -)
+        echo "freising_dates=$FREISING_DATES" >> $GITHUB_OUTPUT
 
     - name: Create Pull Request
       id: create_pr
@@ -218,4 +223,4 @@ jobs:
       with:
         status: ${{ job.status }}
         title: '🎣 Freising Exam Available!'
-        message: 'Good news! There are ${{ needs.update-data.outputs.freising_available }} available exam slot(s) in Freising. Check the data for appointment details.'
+        message: 'Good news! Available exam slots in Freising: ${{ needs.update-data.outputs.freising_dates }}'

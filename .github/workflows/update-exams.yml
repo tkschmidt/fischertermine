@@ -207,20 +207,3 @@ jobs:
           index.html
           plots/
         retention-days: 30
-
-  notify:
-    runs-on: ubuntu-latest
-    needs: update-data
-    if: needs.update-data.outputs.changes == 'true' && needs.update-data.outputs.freising_available > 0
-    continue-on-error: true
-
-    steps:
-    - name: Send Pushover notification
-      uses: umahmood/pushover-actions@main
-      env:
-        PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_API_TOKEN }}
-        PUSHOVER_USER: ${{ secrets.PUSHOVER_USER_KEY }}
-      with:
-        status: ${{ job.status }}
-        title: '🎣 Freising Exam Available!'
-        message: 'Good news! Available exam slots in Freising: ${{ needs.update-data.outputs.freising_dates }}'

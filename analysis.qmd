@@ -75,7 +75,9 @@ for (json_file in json_files) {
   appointments[, scrape_date := scrape_date]
 
   # Calculate free spots
-  appointments[, free_spots := as.numeric(max_participants) - as.numeric(current_participants)]
+  appointments[, max_participants := as.numeric(max_participants)]
+  appointments[, current_participants := as.numeric(current_participants)]
+  appointments[, free_spots := max_participants - current_participants]
 
   # Store in list
   all_data[[json_file]] <- appointments
@@ -88,13 +90,38 @@ dt <- rbindlist(all_data, fill = TRUE)
 dt[, exam_id := paste(exam_date, exam_start_time, location, sep = " | ")]
 
 # Keep only the columns we need for plotting
-dt_agg <- dt[, .(exam_id, scrape_date, free_spots, region, location, exam_date, exam_start_time)]
+dt_agg <- dt[, .(exam_id, scrape_date, free_spots, max_participants, region, location, exam_date, exam_start_time)]
 
 # Remove any potential duplicates (same exam_id at same scrape_date)
 dt_agg <- unique(dt_agg, by = c("exam_id", "scrape_date"))
 
 # Sort by exam_id and scrape_date for proper line plotting
 setorder(dt_agg, exam_id, scrape_date)
+
+# Create artificial data points for exams where first observation is below maximum
+# This extends lines to show theoretical starting point when exam was released with all seats empty
+first_obs <- dt_agg[, .SD[1], by = exam_id]  # Get first observation per exam (guaranteed sorted)
+exams_need_artificial <- first_obs[free_spots < max_participants]
+
+if (nrow(exams_need_artificial) > 0) {
+  # Create one artificial point per exam at first scrape_date with full capacity
+  artificial_points <- exams_need_artificial[, .(
+    exam_id = exam_id,
+    scrape_date = scrape_date,
+    free_spots = max_participants,
+    max_participants = max_participants,
+    region = region,
+    location = location,
+    exam_date = exam_date,
+    exam_start_time = exam_start_time
+  )]
+
+  # Combine with main dataset
+  dt_agg <- rbindlist(list(dt_agg, artificial_points), use.names = TRUE)
+
+  # Re-sort: higher free_spots first at same scrape_date to create vertical drop lines
+  setorder(dt_agg, exam_id, scrape_date, -free_spots)
+}
 ```
 
 ## Key Statistics
@@ -116,6 +143,8 @@ cat(sprintf("- **Total observations:** %s location-time combinations\n", format(
 ## Free Spots Over Time - All Locations
 
 This chart shows the number of free exam spots across all tracked locations over time.
+
+**Note on artificial data points:** For exams where the first observation shows fewer available seats than the exam's maximum capacity, an artificial data point is added at the same timestamp showing all seats as available. This creates a vertical drop line indicating that some seats were booked between when the exam was released and our first scrape. These artificial points help visualize the booking activity that occurred before monitoring began.
 
 ```{r plot-all-locations}
 #| fig-cap: "Free spots for each exam appointment over time, split by region and location"

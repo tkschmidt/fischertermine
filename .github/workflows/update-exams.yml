@@ -119,7 +119,6 @@ jobs:
         token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         commit-message: "${{ steps.changes.outputs.message }}"
         title: "Update exam data - ${{ steps.changes.outputs.message }}"
-        assignees: tkschmidt
         body: |
           🎣 **Fishing Exam Data Update**
 

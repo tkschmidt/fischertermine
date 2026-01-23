@@ -70,6 +70,10 @@ dt_agg <- dt[, .(
   total_appointments = .N
 ), by = .(location, scrape_date)]
 
+# Filter to last 3 weeks only
+three_weeks_ago <- Sys.time() - weeks(3)
+dt_agg <- dt_agg[scrape_date >= three_weeks_ago]
+
 # Sort by scrape date
 setorder(dt_agg, scrape_date)
 

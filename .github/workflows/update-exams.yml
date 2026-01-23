@@ -138,12 +138,12 @@ jobs:
         branch: update-exam-data-${{ github.run_number }}
         delete-branch: true
 
-    - name: Enable auto-merge
+    - name: Merge pull request
       if: steps.create_pr.outputs.pull-request-number
       env:
         GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
       run: |
-        gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --auto --merge --delete-branch
+        gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --merge --delete-branch
 
     - name: Wait for merge and trigger deployment
       if: steps.create_pr.outputs.pull-request-number

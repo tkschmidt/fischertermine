@@ -122,6 +122,10 @@ if (nrow(exams_need_artificial) > 0) {
   # Re-sort: higher free_spots first at same scrape_date to create vertical drop lines
   setorder(dt_agg, exam_id, scrape_date, -free_spots)
 }
+
+# Filter to last 3 weeks only
+three_weeks_ago <- Sys.time() - weeks(3)
+dt_agg <- dt_agg[scrape_date >= three_weeks_ago]
 ```
 
 ## Key Statistics
